@@ -1,6 +1,20 @@
 version: "3.5"
 
 services:
+  messenger:
+    build:
+      context: .docker/app
+      args:
+        - uuid=${CURRENT_UID:-1000}
+    working_dir: /var/www
+    depends_on:
+      - app
+    volumes:
+      - .:/var/www:cached
+    networks:
+      - default
+    command: php bin/console messenger:consume
+
   app:
     build:
       context: .docker/app
@@ -15,7 +29,6 @@ services:
       PHP_IDE_CONFIG: "serverName=localhost"
       XDEBUG_CONFIG: "client_host=host.docker.internal" # change to docker.for.win.localhost if on Windows without WSL
       XDEBUG_SESSION: "PHPSTORM"
-#    command: php bin/console messenger:consume
 
   nginx:
     image: nginx
