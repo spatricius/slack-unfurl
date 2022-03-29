@@ -4,21 +4,26 @@ namespace App\MessageHandler;
 
 use App\Message\LinkSharedMessage;
 use Gitlab\Client;
+use Psr\Log\LoggerInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 class LinkSharedHandler implements MessageHandlerInterface
 {
     private string $slackAppToken;
     private Client $gitlabClient;
+    private LoggerInterface $logger;
 
-    public function __construct(string $slackAppToken, Client $gitlabClient)
+    public function __construct(string $slackAppToken, Client $gitlabClient, LoggerInterface $logger)
     {
         $this->slackAppToken = $slackAppToken;
         $this->gitlabClient  = $gitlabClient;
+        $this->logger = $logger;
     }
 
     public function __invoke(LinkSharedMessage $message)
     {
+        $this->logger->info('LinkSharedHandler invoked');
+
         $eventObject = $message->getEventObject();
         $unfurls     = array();
 
@@ -40,6 +45,7 @@ class LinkSharedHandler implements MessageHandlerInterface
             }
 
             if (!$projectId) {
+                $this->logger->warning('No project id');
                 return;
             }
 
@@ -71,6 +77,7 @@ class LinkSharedHandler implements MessageHandlerInterface
             'unfurls' => json_encode($unfurls),
         );
 
+        $this->logger->info('Sending callback');
         try {
             $client   = \JoliCode\Slack\ClientFactory::create($this->slackAppToken);
             $response = $client->chatUnfurl($request);
@@ -81,6 +88,8 @@ class LinkSharedHandler implements MessageHandlerInterface
 
     private function generateUnfurlText($projectId, $url)
     {
+        $this->logger->info('Generating unfurl text');
+
         // eg. /-/merge_requests/316/diffs
         preg_match('#merge_requests/(?<iid>\d+)#', $url, $matches);
         $iid = $matches['iid'] ?? null;

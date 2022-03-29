@@ -2,9 +2,6 @@
     "clue/stream-filter": {
         "version": "v1.5.0"
     },
-    "davidrjonas/composer-lock-diff": {
-        "version": "1.7.0"
-    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -112,6 +109,9 @@
     },
     "m4tthumphrey/php-gitlab-api": {
         "version": "11.7.0"
+    },
+    "monolog/monolog": {
+        "version": "2.4.0"
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
@@ -292,6 +292,21 @@
         },
         "files": [
             "config/packages/messenger.yaml"
+        ]
+    },
+    "symfony/monolog-bridge": {
+        "version": "v6.0.3"
+    },
+    "symfony/monolog-bundle": {
+        "version": "3.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.7",
+            "ref": "213676c4ec929f046dfde5ea8e97625b81bc0578"
+        },
+        "files": [
+            "config/packages/monolog.yaml"
         ]
     },
     "symfony/options-resolver": {

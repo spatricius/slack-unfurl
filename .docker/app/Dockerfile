@@ -7,7 +7,7 @@ COPY ./php.ini /usr/local/etc/php/conf.d/php.ini
 
 RUN echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | tee /etc/apt/sources.list.d/symfony-cli.list
 RUN apt-get update && apt-get upgrade -yqq
-RUN apt-get install -yqq git zip unzip vim sudo symfony-cli libpq-dev supervisor
+RUN apt-get install -yqq git zip unzip vim sudo symfony-cli libpq-dev
 
 # Enable PHP Extentions:
 RUN docker-php-ext-install pdo_mysql \
