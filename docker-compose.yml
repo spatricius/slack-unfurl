@@ -20,6 +20,7 @@ services:
       context: .docker/app
       args:
         - uuid=${CURRENT_UID:-1000}
+        - without_xdebug=1
     working_dir: /var/www
     volumes:
       - .:/var/www:cached

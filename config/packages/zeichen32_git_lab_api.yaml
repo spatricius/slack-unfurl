@@ -1,6 +1,0 @@
-zeichen32_git_lab_api:
-  clients:
-    createit:
-      token: glpat-zxs3feP73C5FdfXx1N1y
-      url: https://gitlab.createit.pl:8888/api/v4/
-      auth_method: http_token

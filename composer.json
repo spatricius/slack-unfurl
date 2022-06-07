@@ -1,26 +1,18 @@
 {
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/spatricius/slack-unfurl-bundle"
+        }
+    ],
     "require": {
         "php": ">=8.0.2",
-        "ext-ctype": "*",
-        "ext-iconv": "*",
-        "doctrine/doctrine-migrations-bundle": "^3.2",
-        "doctrine/orm": "^2.11",
-        "guzzlehttp/guzzle": "^7.4",
-        "jolicode/slack-php-api": "^4.4",
-        "symfony/console": "6.0.*",
-        "symfony/doctrine-messenger": "6.0.*",
-        "symfony/dotenv": "6.0.*",
-        "symfony/flex": "^2",
-        "symfony/framework-bundle": "6.0.*",
-        "symfony/messenger": "6.0.*",
-        "symfony/monolog-bundle": "^3.7",
-        "symfony/runtime": "6.0.*",
-        "symfony/yaml": "6.0.*",
-        "zeichen32/gitlabapibundle": "^6.0"
+        "symfony/flex": "^2.2",
+        "spatricius/slack-unfurl-bundle": "dev-main"
     },
     "config": {
         "allow-plugins": {

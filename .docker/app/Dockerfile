@@ -1,6 +1,8 @@
 FROM php:8.1.2-fpm
 
 ARG uuid=1000
+ARG without_xdebug
+ENV WITHOUT_XDEBUG=$without_xdebug
 
 # Copy configuration file:
 COPY ./php.ini /usr/local/etc/php/conf.d/php.ini

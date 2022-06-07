@@ -179,6 +179,9 @@
     "ralouphie/getallheaders": {
         "version": "3.0.3"
     },
+    "spatricius/slack-unfurl-bundle": {
+        "version": "dev-main"
+    },
     "symfony/cache": {
         "version": "v6.0.3"
     },
