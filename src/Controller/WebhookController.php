@@ -34,7 +34,7 @@ class WebhookController extends AbstractController
         }
 
         if (empty($requestJson?->api_app_id) || $requestJson?->api_app_id !== $slackAppId){
-            return new Response('<h1>nope.</h1>', 404);
+            return new Response('<h1>bad app id.</h1>', 404);
         }
 
         // unfurl
@@ -45,6 +45,6 @@ class WebhookController extends AbstractController
             return new Response('ok');
         }
 
-        return new Response('<h1>nope.</h1>', 404);
+        return new Response('<h1>bad event type.</h1>', 404);
     }
 }

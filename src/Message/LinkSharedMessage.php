@@ -4,7 +4,7 @@ namespace App\Message;
 
 class LinkSharedMessage
 {
-    private object $eventObject;
+    protected object $eventObject;
 
     public function __construct(object $eventObject)
     {
