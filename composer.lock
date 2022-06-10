@@ -3521,12 +3521,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatricius/slack-unfurl-bundle.git",
-                "reference": "431ac0d59ce5507f0c4d388a2e137bcee46f2288"
+                "reference": "4ff0febca76ce0b0f5ff70b8626a058268e8150c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatricius/slack-unfurl-bundle/zipball/431ac0d59ce5507f0c4d388a2e137bcee46f2288",
-                "reference": "431ac0d59ce5507f0c4d388a2e137bcee46f2288",
+                "url": "https://api.github.com/repos/spatricius/slack-unfurl-bundle/zipball/4ff0febca76ce0b0f5ff70b8626a058268e8150c",
+                "reference": "4ff0febca76ce0b0f5ff70b8626a058268e8150c",
                 "shasum": ""
             },
             "require": {
@@ -3566,7 +3566,7 @@
                 "source": "https://github.com/spatricius/slack-unfurl-bundle/tree/main",
                 "issues": "https://github.com/spatricius/slack-unfurl-bundle/issues"
             },
-            "time": "2022-06-09T22:55:04+00:00"
+            "time": "2022-06-09T23:25:04+00:00"
         },
         {
             "name": "symfony/cache",
