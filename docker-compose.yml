@@ -13,7 +13,7 @@ services:
       - .:/var/www:cached
     networks:
       - default
-    command: php bin/console messenger:consume
+    command: ./run-messenger.sh
 
   app:
     build:

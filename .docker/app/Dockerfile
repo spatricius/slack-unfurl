@@ -1,6 +1,7 @@
 FROM php:8.1.2-fpm
 
 ARG uuid=1000
+ARG gid=www
 ARG without_xdebug
 ENV WITHOUT_XDEBUG=$without_xdebug
 
@@ -19,13 +20,15 @@ RUN docker-php-ext-install pdo_mysql \
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --filename=composer
 
+# Add simple user
+RUN adduser --uid=$uuid www
+
 # Install xdebug:
+COPY --chown=${uuid}:${gid} ./install* /tmp/
 COPY ./xdebug.ini /tmp/xdebug.ini
-COPY ./install-xdebug.sh /tmp/install-xdebug.sh
 RUN chmod a+x /tmp/install*
 RUN /tmp/install-xdebug.sh
 
-RUN adduser --uid=$uuid www
 USER $uuid
 
-# CMD ["/bin/bash"]
+CMD ["/bin/bash","/tmp/install.sh"]
