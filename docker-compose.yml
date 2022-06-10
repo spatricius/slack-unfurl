@@ -2,10 +2,7 @@ version: "3.5"
 
 services:
   messenger:
-    build:
-      context: .docker/app
-      args:
-        - uuid=${CURRENT_UID:-1000}
+    image: app
     working_dir: /var/www
     depends_on:
       - app
@@ -16,6 +13,7 @@ services:
     command: ./run-messenger.sh
 
   app:
+    image: app
     build:
       context: .docker/app
       args:

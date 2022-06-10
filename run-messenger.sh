@@ -6,7 +6,7 @@ set -e
 cd /var/www
 
 function waitForSymfony(){
-    while ! php bin/console -q; do sleep 5; echo "Symfony not ready"; done
+    while ! php bin/console doctrine:query:sql "select 1;"; do sleep 5; echo "Symfony not ready"; done
     echo 'Symfony ready'
 }
 waitForSymfony
