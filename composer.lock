@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4660601ddf483fe993a0ec8093e1ab5f",
+    "content-hash": "540f4be19f6bc2846f8cff7c8e740bac",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -3517,16 +3517,16 @@
         },
         {
             "name": "spatricius/slack-unfurl-bundle",
-            "version": "1.0",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatricius/slack-unfurl-bundle.git",
-                "reference": "bfffbab02c6ed5f85565ddee6a4b291653e81a69"
+                "reference": "53475ab496226121d3d16979010b42b49bfd2320"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatricius/slack-unfurl-bundle/zipball/bfffbab02c6ed5f85565ddee6a4b291653e81a69",
-                "reference": "bfffbab02c6ed5f85565ddee6a4b291653e81a69",
+                "url": "https://api.github.com/repos/spatricius/slack-unfurl-bundle/zipball/53475ab496226121d3d16979010b42b49bfd2320",
+                "reference": "53475ab496226121d3d16979010b42b49bfd2320",
                 "shasum": ""
             },
             "require": {
@@ -3549,31 +3549,27 @@
                 "zeichen32/gitlabapibundle": "^6.0"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "symfony": {
-                    "endpoint": [
-                        "https://api.github.com/repos/spatricius/recipes/contents/index.json",
-                        "flex://defaults"
-                    ]
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Spatricius\\SlackUnfurlBundle\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
-                    "name": "Spatricius",
+                    "name": "spatricius",
                     "email": "spatricius@gmail.com"
                 }
             ],
-            "description": "Slack unfurl based on Symfony Message",
+            "description": "Slack unfurl bundle based on Symfony Message",
             "support": {
-                "source": "https://github.com/spatricius/slack-unfurl-bundle/tree/1.0",
-                "issues": "https://github.com/spatricius/slack-unfurl-bundle/issues"
+                "issues": "https://github.com/spatricius/slack-unfurl-bundle/issues",
+                "source": "https://github.com/spatricius/slack-unfurl-bundle/tree/v1.0.0"
             },
-            "time": "2022-06-10T13:19:19+00:00"
+            "time": "2022-06-10T19:58:20+00:00"
         },
         {
             "name": "symfony/cache",

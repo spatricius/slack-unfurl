@@ -1,14 +1,16 @@
 {
+    "name": "spatricius/slack-unfurl-app",
     "type": "project",
-    "license": "proprietary",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
+    "description": "Slack unfurl bundle based on Symfony Message",
+    "license": "MIT",
+    "authors": [
         {
-            "type": "vcs",
-            "url": "https://github.com/spatricius/slack-unfurl-bundle"
+            "name": "spatricius",
+            "email": "spatricius@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=8.0.2",
         "symfony/flex": "^2.2",
