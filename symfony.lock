@@ -180,7 +180,7 @@
         "version": "3.0.3"
     },
     "spatricius/slack-unfurl-bundle": {
-        "version": "dev-main"
+        "version": "1.0"
     },
     "symfony/cache": {
         "version": "v6.0.3"
