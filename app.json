@@ -1,0 +1,41 @@
+{
+  "name": "Slack unfurl app",
+  "description": "Show link descriptions in Slack",
+  "logo": "https://about.gitlab.com/images/new_logo/A.jpg",
+  "repository": "https://github.com/spatricius/slack-unfurl-app",
+  "keywords": ["php", "slack", "unfurl", "gitlab"],
+  "env": {
+    "SLACK_APP_ID": {
+      "description": "A Slack App ID (find it on https://api.slack.com/apps)",
+      "required": true
+    },
+    "SLACK_APP_TOKEN": {
+      "description": "A Slack App token (find it on https://api.slack.com/apps)",
+      "required": true
+    },
+   "SLACK_REQUEST_TOKEN": {
+      "description": "A Slack Verification Token (find it on https://api.slack.com/apps)",
+      "required": true
+    },
+    "SLACK_ACCESSORY_IMAGE_URL": {
+      "description": "Url to an image shown in the link description",
+      "required": false
+    },
+    "SLACK_ACCESSORY_ALT_TEXT": {
+      "description": "Alt text for the image shown in the link description",
+      "required": false
+    },
+    "GITLAB_API_URL": {
+      "description": "Url to Gitlab API (https://gitlab.XXX.com:88/api/v4/)",
+      "required": false
+    },
+    "GITLAB_DOMAIN": {
+      "description": "Url to Gitlab API (gitlab.XXX.com) to check project urls",
+      "required": false
+    },
+    "GITLAB_TOKEN": {
+      "description": "A Gitlab token (generate it on https://gitlab.XXX.com:88/-/profile/personal_access_tokens)",
+      "required": false
+    }
+  }
+}
