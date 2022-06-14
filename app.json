@@ -4,6 +4,14 @@
   "logo": "https://about.gitlab.com/images/new_logo/A.jpg",
   "repository": "https://github.com/spatricius/slack-unfurl-app",
   "keywords": ["php", "slack", "unfurl", "gitlab"],
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "14.3"
+      }
+    }
+  ],
   "env": {
     "SLACK_APP_ID": {
       "description": "A Slack App ID (find it on https://api.slack.com/apps)",
