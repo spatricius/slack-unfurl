@@ -26,3 +26,7 @@ or run messenger manually
 ``` 
 php bin/console messenger:consume -vvv 
 ```
+
+or deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)

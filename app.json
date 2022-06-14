@@ -36,6 +36,16 @@
     "GITLAB_TOKEN": {
       "description": "A Gitlab token (generate it on https://gitlab.XXX.com:88/-/profile/personal_access_tokens)",
       "required": false
+    },
+    "LD_LIBRARY_PATH": {
+      "description": "PHP worker fix (see https://stackoverflow.com/a/10761148)",
+      "required": false,
+      "value": "/app/php/ext:/app/apache/lib"
+    },
+    "APP_ENV": {
+      "description": "Symfony App env",
+      "required": false,
+      "value": "prod"
     }
   }
 }
