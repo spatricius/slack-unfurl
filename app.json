@@ -12,6 +12,16 @@
       }
     }
   ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
   "env": {
     "SLACK_APP_ID": {
       "description": "A Slack App ID (find it on https://api.slack.com/apps)",
