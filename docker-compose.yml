@@ -32,7 +32,7 @@ services:
   nginx:
     image: nginx
     ports:
-      - "666:80" # http
+      - "666:443" # http
     volumes:
       - ./:/var/www:cached
       - .docker/nginx/conf.d:/etc/nginx/conf.d
